@@ -17,6 +17,7 @@ const url = "mongodb+srv://Admin:Admin123@advisersimplisity.im5jt9z.mongodb.net/
 // const url = "mongodb+srv://faisalameen2022:Pakistan@123!FtS@cluster1.31kwwb5.mongodb.net";
 
 Mongoose.connect(url, { useNewUrlParser: true });
+Mongoose.set('strictQuery', true);
 const Mongo = Mongoose.connection;
 
 Mongo.on("open", () => {
